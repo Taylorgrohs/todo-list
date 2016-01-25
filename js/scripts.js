@@ -25,9 +25,14 @@ $(document).ready(function(){
 
       });
       $("ol.thingstodo").children("li").click(function(){
+        var test = $(this).text();
+        newList.todo.splice(0);
+        //var index = newList.todo.indexOf()
+
         (this).remove();
+
       });
-      $("form#new-item").off(); //clears off all of the previous click listners so when you add new one its not all stacky. 
+      $("form#new-item").off(); //clears off all of the previous click listners so when you add new one its not all stacky.
       $("form#new-item").submit(function(event){
         var inputtedTodoItem = $("input#new-todo-item").val();
         newList.todo.push(inputtedTodoItem);
