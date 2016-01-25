@@ -14,21 +14,31 @@ $(document).ready(function(){
     newList.todo.push(inputtedTodo1);
     newList.todo.push(inputtedTodo2);
     console.log(newList.todo);
+
     $(".days").last().click(function(){
       $("ol").empty();
       $("#show-list").show();
       $("#show-list h2").text(newList.day)
+
       newList.todo.forEach(function(todo){
         $("ol.thingstodo").append("<li>" + todo + "</li>");
+
+      });
+      $("ol.thingstodo").children("li").click(function(){
+        (this).remove();
+      });
+      $("form#new-item").off(); //clears off all of the previous click listners so when you add new one its not all stacky. 
+      $("form#new-item").submit(function(event){
+        var inputtedTodoItem = $("input#new-todo-item").val();
+        newList.todo.push(inputtedTodoItem);
+        $("ol.thingstodo").append("<li>" + inputtedTodoItem + "</li>");
+        event.preventDefault();
       });
     });
 
-    $("form#new-item").submit(function(event){
-      var inputtedTodoItem = $("input#new-todo-item").val();
-      this.todo.push(inputtedTodoItem);
-      $("ol.thingstodo").append("<li>" + inputtedTodoItem + "</li>");
-      event.preventDefault();
-    });
+
   event.preventDefault();
   });
+
+
 });
