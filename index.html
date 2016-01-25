@@ -5,42 +5,43 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Places</title>
+    <title>To do list</title>
   </head>
   <body>
     <div class="container">
-      <h1>Places you've been</h1>
+      <h1>Things to do</h1>
 
       <div class="row">
         <div class="col-md-6">
-          <h2>Add a place you have visited:</h2>
-          <form id="new-place">
+          <h2>Add a to do list:</h2>
+          <form id="new-list">
             <div class="form-group">
-              <label for="new-place">Place visited</label>
-              <input type="text" class="form-control" id="new-place">
+              <label for="new-day">Add a day</label>
+              <input type="text" class="form-control" id="new-day">
             </div>
             <div class="form-group">
-              <label for="new-year">Year visited</label>
-              <input type="text" class="form-control" id="new-year">
+              <label for="new-todo1">Add an activity</label>
+              <input type="text" class="form-control" id="new-todo1">
             </div>
             <div class="form-group">
-              <label for="new-reason">Reason for visit</label>
-              <input type="text" class="form-control" id="new-reason">
+              <label for="new-todo2">Add another activity</label>
+              <input type="text" class="form-control" id="new-todo2">
             </div>
 
             <button type="submit" class="btn">Add</button>
           </form>
 
-          <h2>Place:</h2>
-          <ul id="place">
+          <h2>List:</h2>
+          <ul id="list">
 
           </ul>
         </div>
         <div class="col-md-6 contact">
-          <div id="show-place">
+          <div id="show-list">
             <h2></h2>
+            <ol class="thingstodo">
 
-            <p><span class ="info"></span></p>
+            </ol>
           </div>
         </div>
       </div>

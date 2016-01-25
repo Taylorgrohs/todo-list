@@ -2,11 +2,11 @@
   display: none;
 }
 
-.places {
+.days {
   cursor: pointer;
   color: #0088cc;
 }
 
-.places:hover {
+.days:hover {
   text-decoration: underline;
 }
