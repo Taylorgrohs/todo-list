@@ -21,12 +21,12 @@ $(document).ready(function(){
       $("#show-list h2").text(newList.day)
 
       newList.todo.forEach(function(todo){
-        $("ol.thingstodo").append("<li>" + todo + "</li>");
+        $("ol.thingstodo").append("<li id='" + newList.todo.indexOf(todo)+ "'>" + todo + "</li>");
 
       });
       $("ol.thingstodo").children("li").click(function(){
         var test = $(this).text();
-        newList.todo.splice(0);
+        newList.todo.splice(this.id, this.id);
         //var index = newList.todo.indexOf()
 
         (this).remove();
